@@ -7,13 +7,8 @@ package project;
 
 import java.awt.Color;
 import java.awt.Image;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
-import javax.imageio.ImageIO;
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -152,8 +147,12 @@ public class MainPage extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jSeparator6 = new javax.swing.JSeparator();
+        searchBar = new javax.swing.JTextField();
+        searchButton = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        homeButton = new javax.swing.JButton();
+        newlyAdded = new javax.swing.JButton();
         electronicsButton = new javax.swing.JButton();
         accountButton = new javax.swing.JButton();
         cartButton = new javax.swing.JButton();
@@ -163,6 +162,9 @@ public class MainPage extends javax.swing.JFrame {
         homePanel = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         homeTable = new javax.swing.JTable();
+        searchPanel = new javax.swing.JPanel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        searchTable = new javax.swing.JTable();
         electronicsPanel = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         electronicsTable = new javax.swing.JTable();
@@ -245,6 +247,62 @@ public class MainPage extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Shopping_Bag_48px.png"))); // NOI18N
 
+        jSeparator6.setForeground(new java.awt.Color(0, 77, 64));
+        jSeparator6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jSeparator6.setOpaque(true);
+
+        searchBar.setBackground(new java.awt.Color(0, 150, 136));
+        searchBar.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        searchBar.setForeground(new java.awt.Color(255, 255, 255));
+        searchBar.setBorder(null);
+        searchBar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                searchBarMouseClicked(evt);
+            }
+        });
+        searchBar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchBarActionPerformed(evt);
+            }
+        });
+
+        searchButton.setBackground(new java.awt.Color(0, 121, 107));
+        searchButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
+        searchButton.setForeground(new java.awt.Color(255, 255, 255));
+        searchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Search_31px.png"))); // NOI18N
+        searchButton.setToolTipText("Search");
+        searchButton.setBorder(null);
+        searchButton.setBorderPainted(false);
+        searchButton.setContentAreaFilled(false);
+        searchButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        searchButton.setOpaque(true);
+        searchButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                searchButtonMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                searchButtonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                searchButtonMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                searchButtonMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                searchButtonMouseReleased(evt);
+            }
+        });
+        searchButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchButtonActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Search");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -254,51 +312,68 @@ public class MainPage extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(728, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 349, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jSeparator6)
+                    .addComponent(searchBar, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(searchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(74, 74, 74))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap(12, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(searchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(searchBar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel3))
+                            .addGap(3, 3, 3))
+                        .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         BackgroundPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1250, 60));
 
         jPanel3.setBackground(new java.awt.Color(0, 150, 136));
 
-        homeButton.setBackground(new java.awt.Color(0, 150, 136));
-        homeButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
-        homeButton.setForeground(new java.awt.Color(255, 255, 255));
-        homeButton.setText("Newly Added");
-        homeButton.setToolTipText("Home Page");
-        homeButton.setBorder(null);
-        homeButton.setBorderPainted(false);
-        homeButton.setContentAreaFilled(false);
-        homeButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        homeButton.setOpaque(true);
-        homeButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        newlyAdded.setBackground(new java.awt.Color(0, 150, 136));
+        newlyAdded.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
+        newlyAdded.setForeground(new java.awt.Color(255, 255, 255));
+        newlyAdded.setText("Newly Added");
+        newlyAdded.setToolTipText("Home Page");
+        newlyAdded.setBorder(null);
+        newlyAdded.setBorderPainted(false);
+        newlyAdded.setContentAreaFilled(false);
+        newlyAdded.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        newlyAdded.setOpaque(true);
+        newlyAdded.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                homeButtonMouseClicked(evt);
+                newlyAddedMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                homeButtonMouseEntered(evt);
+                newlyAddedMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                homeButtonMouseExited(evt);
+                newlyAddedMouseExited(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                homeButtonMousePressed(evt);
+                newlyAddedMousePressed(evt);
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                homeButtonMouseReleased(evt);
+                newlyAddedMouseReleased(evt);
             }
         });
-        homeButton.addActionListener(new java.awt.event.ActionListener() {
+        newlyAdded.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                homeButtonActionPerformed(evt);
+                newlyAddedActionPerformed(evt);
             }
         });
 
@@ -476,7 +551,7 @@ public class MainPage extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(homeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(newlyAdded, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addComponent(electronicsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
@@ -497,7 +572,7 @@ public class MainPage extends javax.swing.JFrame {
                 .addComponent(cartButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(mobilesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(kidsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(homeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(newlyAdded, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         BackgroundPanel.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 60, 1210, 50));
@@ -544,7 +619,7 @@ public class MainPage extends javax.swing.JFrame {
         homePanel.setLayout(homePanelLayout);
         homePanelLayout.setHorizontalGroup(
             homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
+            .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
         );
         homePanelLayout.setVerticalGroup(
             homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -552,6 +627,55 @@ public class MainPage extends javax.swing.JFrame {
         );
 
         cardParentPanel.add(homePanel, "card5");
+
+        searchTable.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        searchTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Brand Name", "Model", "Price", "Stock", "Features", "Photo"
+            }
+        ) {
+            Class[] types = new Class[]{
+                java.lang.String.class, java.lang.String.class, java.lang.Integer.class,
+                java.lang.Integer.class, java.lang.String.class, javax.swing.Icon.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+
+            public Class getColumnClass(int columnIndex){
+                return types [columnIndex];
+            }
+
+        });
+        searchTable.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        searchTable.setSelectionBackground(new java.awt.Color(0, 150, 136));
+        searchTable.getTableHeader().setReorderingAllowed(false);
+        searchTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                searchTableMouseClicked(evt);
+            }
+        });
+        jScrollPane6.setViewportView(searchTable);
+
+        javax.swing.GroupLayout searchPanelLayout = new javax.swing.GroupLayout(searchPanel);
+        searchPanel.setLayout(searchPanelLayout);
+        searchPanelLayout.setHorizontalGroup(
+            searchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
+        );
+        searchPanelLayout.setVerticalGroup(
+            searchPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 590, Short.MAX_VALUE)
+        );
+
+        cardParentPanel.add(searchPanel, "card9");
 
         electronicsTable.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         electronicsTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -1179,7 +1303,7 @@ public class MainPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel1MouseClicked
 
-    private void homeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButtonActionPerformed
+    private void newlyAddedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newlyAddedActionPerformed
         // TODO add your handling code here:
         cardParentPanel.removeAll();
         cardParentPanel.add(homePanel);
@@ -1277,32 +1401,32 @@ public class MainPage extends javax.swing.JFrame {
         }
         
         
-    }//GEN-LAST:event_homeButtonActionPerformed
+    }//GEN-LAST:event_newlyAddedActionPerformed
 
-    private void homeButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseReleased
+    private void newlyAddedMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newlyAddedMouseReleased
         // TODO add your handling code here:
-        homeButton.setBackground(new Color(0, 150, 136));
-    }//GEN-LAST:event_homeButtonMouseReleased
+        newlyAdded.setBackground(new Color(0, 150, 136));
+    }//GEN-LAST:event_newlyAddedMouseReleased
 
-    private void homeButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMousePressed
+    private void newlyAddedMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newlyAddedMousePressed
         // TODO add your handling code here:
-        homeButton.setBackground(new Color(0, 77, 64));
-    }//GEN-LAST:event_homeButtonMousePressed
+        newlyAdded.setBackground(new Color(0, 77, 64));
+    }//GEN-LAST:event_newlyAddedMousePressed
 
-    private void homeButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseExited
+    private void newlyAddedMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newlyAddedMouseExited
         // TODO add your handling code here:
-        homeButton.setBackground(new Color(0, 150, 136));
-    }//GEN-LAST:event_homeButtonMouseExited
+        newlyAdded.setBackground(new Color(0, 150, 136));
+    }//GEN-LAST:event_newlyAddedMouseExited
 
-    private void homeButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseEntered
+    private void newlyAddedMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newlyAddedMouseEntered
         // TODO add your handling code here:;
-        homeButton.setBackground(new Color(0, 137, 123));
+        newlyAdded.setBackground(new Color(0, 137, 123));
 
-    }//GEN-LAST:event_homeButtonMouseEntered
+    }//GEN-LAST:event_newlyAddedMouseEntered
 
-    private void homeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseClicked
+    private void newlyAddedMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newlyAddedMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_homeButtonMouseClicked
+    }//GEN-LAST:event_newlyAddedMouseClicked
 
     private void electronicsButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_electronicsButtonMouseClicked
         // TODO add your handling code here:
@@ -1904,6 +2028,159 @@ public class MainPage extends javax.swing.JFrame {
         
     }//GEN-LAST:event_homeTableMouseClicked
 
+    private void searchBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_searchBarActionPerformed
+
+    private void searchButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchButtonMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_searchButtonMouseClicked
+
+    private void searchButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchButtonMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_searchButtonMouseEntered
+
+    private void searchButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchButtonMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_searchButtonMouseExited
+
+    private void searchButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchButtonMousePressed
+        // TODO add your handling code here:
+        searchButton.setBackground(new Color(0, 77, 64));
+    }//GEN-LAST:event_searchButtonMousePressed
+
+    private void searchButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchButtonMouseReleased
+        // TODO add your handling code here:
+        searchButton.setBackground(new Color(0, 121, 107));
+    }//GEN-LAST:event_searchButtonMouseReleased
+
+    private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
+        // TODO add your handling code here:
+        //ProductInformation.categoryChooser = "mobiles";
+        Search.electronics=0;
+        Search.mobile=0;
+        Search.kids=0;
+        
+        ArrayList<ProductList> list = Search.mobileSearch(searchBar.getText());
+        Object rowData[] = new Object[6];
+        int i, j, k;
+        
+        
+        if(searchBar.getText().equals(""))
+            JOptionPane.showMessageDialog(null, "Search field empty!");
+        else if(Search.electronics==0 && Search.mobile==0 && Search.kids==0)
+            JOptionPane.showMessageDialog(null, "Sorry! Product does not exist!");
+        else{
+            cardParentPanel.removeAll();
+            cardParentPanel.add(searchPanel);
+            cardParentPanel.repaint();
+            cardParentPanel.revalidate();
+                    
+            DefaultTableModel model =  (DefaultTableModel) searchTable.getModel();
+            DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+            centerRenderer.setHorizontalAlignment( JLabel.CENTER );
+            searchTable.getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
+            searchTable.getColumnModel().getColumn(1).setCellRenderer( centerRenderer );
+            searchTable.getColumnModel().getColumn(2).setCellRenderer( centerRenderer );
+            searchTable.getColumnModel().getColumn(3).setCellRenderer( centerRenderer );
+            searchTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
+
+
+            model.setRowCount(0);
+            for(i=0 ; i<Search.electronics; i++){
+                rowData[0] = list.get(i).getBrand();
+                rowData[1] = list.get(i).getModel();
+                rowData[2] = list.get(i).getPrice();
+                rowData[3] = list.get(i).getQty();
+                rowData[4] = list.get(i).getDescription();
+                String temp = list.get(i).getMimage();
+                ImageIcon ii = new ImageIcon(getClass().getResource("/products/electronics/"+temp));
+                Image resizedImage = ii.getImage();
+                ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
+
+                rowData[5] = ii;
+                model.addRow(rowData);
+                searchTable.setRowHeight(150);
+                searchTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+            }
+            for(k=i; k<Search.mobile+Search.electronics; k++){
+                rowData[0] = list.get(k).getBrand();
+                rowData[1] = list.get(k).getModel();
+                rowData[2] = list.get(k).getPrice();
+                rowData[3] = list.get(k).getQty();
+                rowData[4] = list.get(k).getDescription();
+                String temp = list.get(k).getMimage();
+                ImageIcon ii = new ImageIcon(getClass().getResource("/products/mobiles/"+temp));
+                Image resizedImage = ii.getImage();
+                ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
+
+                rowData[5] = ii;
+                model.addRow(rowData);
+                searchTable.setRowHeight(150);
+                searchTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+            }
+            System.out.println();
+            for(j=k; j<Search.mobile+Search.electronics+Search.kids; j++){
+                rowData[0] = list.get(j).getBrand();
+                rowData[1] = list.get(j).getModel();
+                rowData[2] = list.get(j).getPrice();
+                rowData[3] = list.get(j).getQty();
+                rowData[4] = list.get(j).getDescription();
+                String temp = list.get(j).getMimage();
+                ImageIcon ii = new ImageIcon(getClass().getResource("/products/kids/"+temp));
+                Image resizedImage = ii.getImage();
+                ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
+
+                rowData[5] = ii;
+                model.addRow(rowData);
+                searchTable.setRowHeight(150);
+                searchTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+            }
+        }
+        
+        
+    }//GEN-LAST:event_searchButtonActionPerformed
+
+    private void searchBarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchBarMouseClicked
+        // TODO add your handling code here:
+        searchBar.setText("");
+    }//GEN-LAST:event_searchBarMouseClicked
+
+    private void searchTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchTableMouseClicked
+        // TODO add your handling code here:
+        int rowIndex = searchTable.getSelectedRow();
+        
+        if(Search.electronics!=0 && rowIndex<Search.electronics)
+            ProductInformation.categoryChooser = "electronics";
+        else if(Search.mobile!=0 && rowIndex>=Search.electronics && rowIndex<Search.electronics+Search.mobile)
+            ProductInformation.categoryChooser = "mobiles";
+        else 
+            ProductInformation.categoryChooser = "kids";
+        
+        pi.setVisible(true);
+        pi.pack();
+        
+        int selectedRow = searchTable.getSelectedRow();
+        TableModel tm = searchTable.getModel();
+        
+        String brand = tm.getValueAt(selectedRow, 0).toString();
+        String model = tm.getValueAt(selectedRow, 1).toString();
+        String price = tm.getValueAt(selectedRow, 2).toString();
+        String stock = tm.getValueAt(selectedRow, 3).toString();
+        String feature = tm.getValueAt(selectedRow, 4).toString();
+        ImageIcon img = (ImageIcon) tm.getValueAt(selectedRow, 5);
+        
+        pi.productInfoBrandName.setText(brand);
+        pi.productInfoModel.setText(model);
+        pi.productInfoPrice.setText(price);
+        pi.productInfoStock.setText(stock);
+        pi.productInfoFeature.setText(feature);
+        pi.productPhoto.setIcon(img);
+        
+        
+        
+    }//GEN-LAST:event_searchTableMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1962,7 +2239,6 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JPanel electronicsPanel;
     private javax.swing.JTable electronicsTable;
     private javax.swing.JLabel emptyField;
-    private javax.swing.JButton homeButton;
     private javax.swing.JPanel homePanel;
     private javax.swing.JTable homeTable;
     private javax.swing.JLabel jLabel1;
@@ -1978,6 +2254,7 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
@@ -1995,11 +2272,13 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
     private javax.swing.JButton kidsButton;
@@ -2008,6 +2287,11 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JTable mobileTable;
     private javax.swing.JButton mobilesButton;
     private javax.swing.JPanel mobilesPanel;
+    private javax.swing.JButton newlyAdded;
+    private javax.swing.JTextField searchBar;
+    private javax.swing.JButton searchButton;
+    private javax.swing.JPanel searchPanel;
+    private javax.swing.JTable searchTable;
     private javax.swing.JCheckBox showPassword;
     private javax.swing.JCheckBox showPassword1;
     private javax.swing.JButton signInButton;

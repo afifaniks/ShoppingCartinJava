@@ -145,7 +145,7 @@ public class AdminPanel extends javax.swing.JFrame {
         updateButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         updateButton.setForeground(new java.awt.Color(255, 255, 255));
         updateButton.setText("New Entry");
-        updateButton.setToolTipText("Home Page");
+        updateButton.setToolTipText("Enter new product");
         updateButton.setBorder(null);
         updateButton.setBorderPainted(false);
         updateButton.setContentAreaFilled(false);
@@ -178,7 +178,7 @@ public class AdminPanel extends javax.swing.JFrame {
         checkStockButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         checkStockButton.setForeground(new java.awt.Color(255, 255, 255));
         checkStockButton.setText("Check Stock");
-        checkStockButton.setToolTipText("TV, Fridge, Electronic Devices");
+        checkStockButton.setToolTipText("Stock status");
         checkStockButton.setBorder(null);
         checkStockButton.setBorderPainted(false);
         checkStockButton.setContentAreaFilled(false);
@@ -211,7 +211,7 @@ public class AdminPanel extends javax.swing.JFrame {
         billingButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         billingButton.setForeground(new java.awt.Color(255, 255, 255));
         billingButton.setText("Billing");
-        billingButton.setToolTipText("Latest Mobile available on store!");
+        billingButton.setToolTipText("Total billings ");
         billingButton.setBorder(null);
         billingButton.setBorderPainted(false);
         billingButton.setContentAreaFilled(false);
