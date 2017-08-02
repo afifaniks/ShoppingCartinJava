@@ -25,7 +25,7 @@ public class DbConnector {
 
     public static int insertToUser(String username, String name, String email, String password, String card) {
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:E:/Project/DBs/bbs.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/bbs.db");
 //            String tester = "SELECT * FROM userinfo WHERE username = '"+username+"'";
 //            Statement stmt = con.createStatement();
 //            
@@ -64,7 +64,7 @@ public class DbConnector {
     
     public static boolean signer(String username, String pass){
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:E:/Project/DBs/bbs.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/bbs.db");
             String check = "SELECT username, password FROM userinfo WHERE username=? AND password=?";
             PreparedStatement ps = con.prepareStatement(check);
             
@@ -85,7 +85,7 @@ public class DbConnector {
         String[] query= new String[2];
         
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:E:/Project/DBs/bbs.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/bbs.db");
             String check = "SELECT username, email, password FROM userinfo WHERE username=?";
             PreparedStatement ps = con.prepareStatement(check);
             

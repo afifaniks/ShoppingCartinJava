@@ -25,7 +25,7 @@ public class ElectronicsDB {
     public static boolean flag = false;
     public static void insertIntoElectronicsDB(String brand, String model, int price, int qty, String description, String imagePath){
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:E:/Project/DBs/electronicsDB.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/electronicsDB.db");
          
             PreparedStatement ps = con.prepareStatement("INSERT INTO electronics(mbrand, mmodel, mprice,"
                     + "mquantity, mdescription, mphoto) VALUES(?,?,?,?,?,?)");
@@ -47,7 +47,7 @@ public class ElectronicsDB {
     
     public static void updateElectronicsDB(String model, int qty){
          try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:E:/Project/DBs/electronicsDB.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/electronicsDB.db");
             
             PreparedStatement ps = con.prepareStatement("UPDATE electronics SET mquantity=? WHERE mmodel=?");
             
@@ -69,7 +69,7 @@ public class ElectronicsDB {
     public static ArrayList<ProductList> TableGenerator(){
         ArrayList<ProductList> list = new ArrayList<>();
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:E:/Project/DBs/electronicsDB.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/electronicsDB.db");
             Statement ps = con.createStatement();
             ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, mprice,mquantity, mdescription, mphoto FROM electronics");
             
@@ -93,7 +93,7 @@ public class ElectronicsDB {
    public static ArrayList<ProductList> homePageContent(){
         ArrayList<ProductList> list = new ArrayList<>();
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:E:/Project/DBs/electronicsDB.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/electronicsDB.db");
             Statement ps = con.createStatement();
             ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, mprice,mquantity, mdescription, mphoto FROM electronics ORDER BY id DESC LIMIT 3");
             
@@ -116,7 +116,7 @@ public class ElectronicsDB {
    public static ArrayList<ProductList> checkStock(){
         ArrayList<ProductList> list = new ArrayList<>();
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:E:/Project/DBs/electronicsDB.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/electronicsDB.db");
             Statement ps = con.createStatement();
             ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, mprice, mquantity FROM electronics");
             
@@ -138,7 +138,7 @@ public class ElectronicsDB {
     
    public static void delete(String model){
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:E:/Project/DBs/electronicsDB.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/electronicsDB.db");
             PreparedStatement ps = con.prepareStatement("DELETE FROM electronics WHERE mmodel=?");
             ps.setString(1, model);
             if(ps.executeUpdate()==0)

@@ -25,7 +25,7 @@ public class Search {
     public static ArrayList<ProductList> mobileSearch(String model){
         ArrayList<ProductList> list = new ArrayList<>();
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:E:/Project/DBs/electronicsDB.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/electronicsDB.db");
             PreparedStatement ps = con.prepareStatement("SELECT * FROM electronics WHERE mbrand=? OR mmodel=?");
             ps.setString(1, model);
             ps.setString(2, model);
@@ -44,7 +44,7 @@ public class Search {
             }
             con.close();
             
-            con = DriverManager.getConnection("jdbc:sqlite:E:/Project/DBs/mobileDB.db");
+            con = DriverManager.getConnection("jdbc:sqlite:DBs/mobileDB.db");
             ps = con.prepareStatement("SELECT * FROM mobiles WHERE mbrand=? OR mmodel=?");
             ps.setString(1, model);
             ps.setString(2, model);
@@ -61,7 +61,7 @@ public class Search {
             }
             con.close();
             
-            con = DriverManager.getConnection("jdbc:sqlite:E:/Project/DBs/kidsDB.db");
+            con = DriverManager.getConnection("jdbc:sqlite:DBs/kidsDB.db");
             ps = con.prepareStatement("SELECT * FROM kids WHERE mbrand=? OR mmodel=?");
             ps.setString(1, model);
             ps.setString(2, model);
@@ -77,8 +77,6 @@ public class Search {
 
             }
             con.close();
-            
-            System.out.println(electronics+" "+mobile+" "+kids);
 
         } catch (SQLException ex) {
             Logger.getLogger(MobileDB.class.getName()).log(Level.SEVERE, null, ex);

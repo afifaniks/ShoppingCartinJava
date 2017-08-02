@@ -24,7 +24,7 @@ public class KidsDB {
     public static boolean flag = false;
     public static void insertIntoKidsDB(String brand, String model, int price, int qty, String description, String imagePath){
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:E:/Project/DBs/kidsDB.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/kidsDB.db");
          
             PreparedStatement ps = con.prepareStatement("INSERT INTO kids(mbrand, mmodel, mprice,"
                     + "mquantity, mdescription, mphoto) VALUES(?,?,?,?,?,?)");
@@ -47,7 +47,7 @@ public class KidsDB {
     
     public static void updateKidsDB(String model, int qty){
          try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:E:/Project/DBs/kidsDB.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/kidsDB.db");
             
             PreparedStatement ps = con.prepareStatement("UPDATE kids SET mquantity=? WHERE mmodel=?");
             
@@ -70,7 +70,7 @@ public class KidsDB {
     public static ArrayList<ProductList> TableGenerator(){
         ArrayList<ProductList> list = new ArrayList<>();
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:E:/Project/DBs/kidsDB.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/kidsDB.db");
             Statement ps = con.createStatement();
             ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, mprice,mquantity, mdescription, mphoto FROM kids");
             
@@ -94,7 +94,7 @@ public class KidsDB {
     public static ArrayList<ProductList> homePageContent(){
         ArrayList<ProductList> list = new ArrayList<>();
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:E:/Project/DBs/kidsDB.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/kidsDB.db");
             Statement ps = con.createStatement();
             ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, mprice,mquantity, mdescription, mphoto FROM kids ORDER BY id DESC LIMIT 3");
             
@@ -118,7 +118,7 @@ public class KidsDB {
     public static ArrayList<ProductList> checkStock(){
         ArrayList<ProductList> list = new ArrayList<>();
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:E:/Project/DBs/kidsDB.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/kidsDB.db");
             Statement ps = con.createStatement();
             ResultSet rs = ps.executeQuery("SELECT mbrand, mmodel, mprice, mquantity FROM kids");
             
@@ -140,7 +140,7 @@ public class KidsDB {
     
        public static void delete(String model){
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:E:/Project/DBs/kidsDB.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/kidsDB.db");
             PreparedStatement ps = con.prepareStatement("DELETE FROM kids WHERE mmodel=?");
             ps.setString(1, model);
             if(ps.executeUpdate()==0)

@@ -271,7 +271,6 @@ public class MainPage extends javax.swing.JFrame {
         searchButton.setForeground(new java.awt.Color(255, 255, 255));
         searchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Search_31px.png"))); // NOI18N
         searchButton.setToolTipText("Search");
-        searchButton.setBorder(null);
         searchButton.setBorderPainted(false);
         searchButton.setContentAreaFilled(false);
         searchButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -349,7 +348,6 @@ public class MainPage extends javax.swing.JFrame {
         newlyAdded.setForeground(new java.awt.Color(255, 255, 255));
         newlyAdded.setText("Newly Added");
         newlyAdded.setToolTipText("Home Page");
-        newlyAdded.setBorder(null);
         newlyAdded.setBorderPainted(false);
         newlyAdded.setContentAreaFilled(false);
         newlyAdded.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -382,7 +380,6 @@ public class MainPage extends javax.swing.JFrame {
         electronicsButton.setForeground(new java.awt.Color(255, 255, 255));
         electronicsButton.setText("Electronics");
         electronicsButton.setToolTipText("TV, Fridge, Electronic Devices");
-        electronicsButton.setBorder(null);
         electronicsButton.setBorderPainted(false);
         electronicsButton.setContentAreaFilled(false);
         electronicsButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -415,7 +412,6 @@ public class MainPage extends javax.swing.JFrame {
         accountButton.setForeground(new java.awt.Color(255, 255, 255));
         accountButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Person_48px.png"))); // NOI18N
         accountButton.setToolTipText("Account Info");
-        accountButton.setBorder(null);
         accountButton.setBorderPainted(false);
         accountButton.setContentAreaFilled(false);
         accountButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -449,7 +445,6 @@ public class MainPage extends javax.swing.JFrame {
         cartButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_OpenCart_24px.png"))); // NOI18N
         cartButton.setText("Cart");
         cartButton.setToolTipText("View your cart.");
-        cartButton.setBorder(null);
         cartButton.setBorderPainted(false);
         cartButton.setContentAreaFilled(false);
         cartButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -483,8 +478,7 @@ public class MainPage extends javax.swing.JFrame {
         mobilesButton.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         mobilesButton.setForeground(new java.awt.Color(255, 255, 255));
         mobilesButton.setText("Mobiles");
-        mobilesButton.setToolTipText("Latest Mobile available on store!");
-        mobilesButton.setBorder(null);
+        mobilesButton.setToolTipText("Latest mobiles available on store!");
         mobilesButton.setBorderPainted(false);
         mobilesButton.setContentAreaFilled(false);
         mobilesButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -517,7 +511,6 @@ public class MainPage extends javax.swing.JFrame {
         kidsButton.setForeground(new java.awt.Color(255, 255, 255));
         kidsButton.setText("Kids Corner");
         kidsButton.setToolTipText("Toys, Teddys and much more!");
-        kidsButton.setBorder(null);
         kidsButton.setBorderPainted(false);
         kidsButton.setContentAreaFilled(false);
         kidsButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -551,24 +544,24 @@ public class MainPage extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(newlyAdded, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
+                .addComponent(newlyAdded)
+                .addGap(23, 23, 23)
                 .addComponent(electronicsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(mobilesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(kidsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 351, Short.MAX_VALUE)
+                .addComponent(kidsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 341, Short.MAX_VALUE)
                 .addComponent(cartButton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
+                .addGap(30, 30, 30)
                 .addComponent(accountButton, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(21, 21, 21))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(electronicsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(accountButton)
+                .addComponent(accountButton, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addComponent(cartButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(mobilesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(kidsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -752,7 +745,6 @@ public class MainPage extends javax.swing.JFrame {
         buyButton.setForeground(new java.awt.Color(255, 255, 255));
         buyButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Buy_24px.png"))); // NOI18N
         buyButton.setText("Buy");
-        buyButton.setBorder(null);
         buyButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         buyButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1045,13 +1037,12 @@ public class MainPage extends javax.swing.JFrame {
                 signInButtonActionPerformed(evt);
             }
         });
-        jPanel4.add(signInButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 502, 70, 30));
+        jPanel4.add(signInButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 502, 90, 30));
 
         showPassword.setBackground(new java.awt.Color(255, 255, 255));
         showPassword.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         showPassword.setForeground(new java.awt.Color(0, 77, 64));
         showPassword.setToolTipText("Show/Hide Password");
-        showPassword.setBorder(null);
         showPassword.setBorderPaintedFlat(true);
         showPassword.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         showPassword.setPreferredSize(new java.awt.Dimension(30, 30));
@@ -1067,14 +1058,13 @@ public class MainPage extends javax.swing.JFrame {
         LogUpButton.setForeground(new java.awt.Color(255, 255, 255));
         LogUpButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Checked_24px.png"))); // NOI18N
         LogUpButton.setText("Sign Up");
-        LogUpButton.setBorder(null);
         LogUpButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LogUpButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LogUpButtonActionPerformed(evt);
             }
         });
-        jPanel4.add(LogUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 400, 130, 50));
+        jPanel4.add(LogUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 400, 140, 50));
 
         signUpUsernameField.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         signUpUsernameField.setForeground(new java.awt.Color(0, 77, 64));
@@ -1211,7 +1201,6 @@ public class MainPage extends javax.swing.JFrame {
         LogInButton.setForeground(new java.awt.Color(255, 255, 255));
         LogInButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Login_24px.png"))); // NOI18N
         LogInButton.setText("Sign In");
-        LogInButton.setBorder(null);
         LogInButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LogInButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1225,7 +1214,6 @@ public class MainPage extends javax.swing.JFrame {
         signUpButton.setForeground(new java.awt.Color(0, 150, 136));
         signUpButton.setText("Sign Up now.");
         signUpButton.setToolTipText("Sign In with your existed credentials.");
-        signUpButton.setBorder(null);
         signUpButton.setBorderPainted(false);
         signUpButton.setContentAreaFilled(false);
         signUpButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1249,13 +1237,12 @@ public class MainPage extends javax.swing.JFrame {
                 signUpButtonActionPerformed(evt);
             }
         });
-        jPanel6.add(signUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 502, 110, 30));
+        jPanel6.add(signUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 502, 130, 30));
 
         showPassword1.setBackground(new java.awt.Color(255, 255, 255));
         showPassword1.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         showPassword1.setForeground(new java.awt.Color(0, 77, 64));
         showPassword1.setToolTipText("Show/Hide Password");
-        showPassword1.setBorder(null);
         showPassword1.setBorderPaintedFlat(true);
         showPassword1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         showPassword1.setPreferredSize(new java.awt.Dimension(30, 30));

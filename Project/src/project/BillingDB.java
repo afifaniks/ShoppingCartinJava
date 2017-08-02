@@ -24,7 +24,7 @@ public class BillingDB {
     
     public static void insertIntoBillingDB(String username, int price, String date){
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:E:/Project/DBs/billingDB.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/billingDB.db");
          
             PreparedStatement ps = con.prepareStatement("INSERT INTO billing(uname, bill, date) VALUES(?,?,?)");
             
@@ -43,7 +43,7 @@ public class BillingDB {
         ArrayList<BillObject> customers = new ArrayList<>();
       
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:E:/Project/DBs/billingDB.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/billingDB.db");
             Statement ps = con.createStatement();
             ResultSet rs = ps.executeQuery("SELECT id, uname, bill, date FROM billing");
             
@@ -64,7 +64,7 @@ public class BillingDB {
     //Deleting billing log
     public static void deleteBillings(){
          try {
-            Connection con = DriverManager.getConnection("jdbc:sqlite:E:/Project/DBs/billingDB.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/billingDB.db");
             PreparedStatement ps = con.prepareStatement("DELETE FROM billing");
             ps.executeUpdate();
             JOptionPane.showMessageDialog(null, "All entries have been deleted!");
