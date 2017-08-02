@@ -347,7 +347,7 @@ public class MainPage extends javax.swing.JFrame {
         newlyAdded.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         newlyAdded.setForeground(new java.awt.Color(255, 255, 255));
         newlyAdded.setText("Newly Added");
-        newlyAdded.setToolTipText("Home Page");
+        newlyAdded.setToolTipText("Check what's new!");
         newlyAdded.setBorderPainted(false);
         newlyAdded.setContentAreaFilled(false);
         newlyAdded.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -559,9 +559,9 @@ public class MainPage extends javax.swing.JFrame {
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(accountButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(electronicsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(accountButton, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addComponent(cartButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(mobilesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(kidsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)

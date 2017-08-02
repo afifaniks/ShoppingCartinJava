@@ -244,9 +244,9 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="accountButton" alignment="0" pref="0" max="32767" attributes="0"/>
                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                       <Component id="electronicsButton" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                      <Component id="accountButton" alignment="0" pref="0" max="32767" attributes="0"/>
                       <Component id="cartButton" alignment="3" max="32767" attributes="0"/>
                       <Component id="mobilesButton" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
                       <Component id="kidsButton" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
@@ -268,7 +268,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Newly Added"/>
-                <Property name="toolTipText" type="java.lang.String" value="Home Page"/>
+                <Property name="toolTipText" type="java.lang.String" value="Check what&apos;s new!"/>
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
