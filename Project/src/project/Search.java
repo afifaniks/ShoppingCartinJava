@@ -26,7 +26,7 @@ public class Search {
         ArrayList<ProductList> list = new ArrayList<>();
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/electronicsDB.db");
-            PreparedStatement ps = con.prepareStatement("SELECT * FROM electronics WHERE mbrand=? OR mmodel=?");
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM electronics WHERE mbrand=? COLLATE NOCASE OR mmodel=? COLLATE NOCASE");
             ps.setString(1, model);
             ps.setString(2, model);
             ResultSet rs = ps.executeQuery();
@@ -45,7 +45,7 @@ public class Search {
             con.close();
             
             con = DriverManager.getConnection("jdbc:sqlite:DBs/mobileDB.db");
-            ps = con.prepareStatement("SELECT * FROM mobiles WHERE mbrand=? OR mmodel=?");
+            ps = con.prepareStatement("SELECT * FROM mobiles WHERE mbrand=? COLLATE NOCASE OR mmodel=? COLLATE NOCASE");
             ps.setString(1, model);
             ps.setString(2, model);
             rs = ps.executeQuery();
@@ -62,7 +62,7 @@ public class Search {
             con.close();
             
             con = DriverManager.getConnection("jdbc:sqlite:DBs/kidsDB.db");
-            ps = con.prepareStatement("SELECT * FROM kids WHERE mbrand=? OR mmodel=?");
+            ps = con.prepareStatement("SELECT * FROM kids WHERE mbrand=? COLLATE NOCASE OR mmodel=? COLLATE NOCASE");
             ps.setString(1, model);
             ps.setString(2, model);
             rs = ps.executeQuery();
