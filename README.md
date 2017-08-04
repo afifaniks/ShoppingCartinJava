@@ -1,1 +1,1 @@
-# ShoppingCartinJava
+# Shopping Cart in Java
