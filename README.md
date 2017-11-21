@@ -1,32 +1,32 @@
 # Open Source project on Shopping Cart in Java
 **This is a sample project on Shopping Cart using Java SE and sqlite DB.**
 
-Project Components:
+**Project Components:**
 
-  *Cart
+  1)Cart
   
-  *Category Wise Panels
+  2)Category Wise Panels
   
-  *Sign Up/Sign In
+  3)Sign Up/Sign In
   
-  *Password Recovery
+  4)Password Recovery
   
-  *New Product Entry
+  5)New Product Entry
   
-  *Stock Update
+  6)Stock Update
   
-  *Billing details etc.
+  7)Billing details etc.
   
   
-**CAUTION:  
+**CAUTION:**
 
-**THIS PROJECT IS DEVELOPED ON WINDOWS ENVIRONMENT AND NETBEANS IDE 8.2 
+1)THIS PROJECT IS DEVELOPED ON WINDOWS ENVIRONMENT AND NETBEANS IDE 8.2 
 
-**INCLUDED JAR FILES SHOULD BE IMPORTED TO IDE
+2)INCLUDED JAR FILES SHOULD BE IMPORTED TO IDE
 
-**FOR PICTURES THERE ARE THREE DIFFERENT FOLDERS IN 'Project/src/products' AS PER CATEGORY. 
+3)FOR PICTURES THERE ARE THREE DIFFERENT FOLDERS IN 'Project/src/products' AS PER CATEGORY. 
 
-**FOR NEW ENTRY, NEW PICTURES SHOULD   BE PLACED AS PER THEIR CATEGORY.
+4)FOR NEW ENTRY, NEW PICTURES SHOULD   BE PLACED AS PER THEIR CATEGORY.
 
-**TO SIGN INTO ADMIN PANEL SIGN IN AS "username: admin, password: admin" 
+5)TO SIGN INTO ADMIN PANEL SIGN IN AS "username: admin, password: admin" 
 
