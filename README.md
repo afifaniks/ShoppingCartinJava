@@ -3,30 +3,30 @@
 
 **Project Components:**
 
-  1)Cart
+  *Cart
   
-  2)Category Wise Panels
+  *Category Wise Panels
   
-  3)Sign Up/Sign In
+  *Sign Up/Sign In
   
-  4)Password Recovery
+  *Password Recovery
   
-  5)New Product Entry
+  *New Product Entry
   
-  6)Stock Update
+  *Stock Update
   
-  7)Billing details etc.
+  *Billing details etc.
   
   
 **CAUTION:**
 
-1)THIS PROJECT IS DEVELOPED ON WINDOWS ENVIRONMENT AND NETBEANS IDE 8.2 
+*THIS PROJECT IS DEVELOPED ON WINDOWS ENVIRONMENT AND NETBEANS IDE 8.2 
 
-2)INCLUDED JAR FILES SHOULD BE IMPORTED TO IDE
+*INCLUDED JAR FILES SHOULD BE IMPORTED TO IDE
 
-3)FOR PICTURES THERE ARE THREE DIFFERENT FOLDERS IN 'Project/src/products' AS PER CATEGORY. 
+*FOR PICTURES THERE ARE THREE DIFFERENT FOLDERS IN 'Project/src/products' AS PER CATEGORY. 
 
-4)FOR NEW ENTRY, NEW PICTURES SHOULD   BE PLACED AS PER THEIR CATEGORY.
+*FOR NEW ENTRY, NEW PICTURES SHOULD   BE PLACED AS PER THEIR CATEGORY.
 
-5)TO SIGN INTO ADMIN PANEL SIGN IN AS "username: admin, password: admin" 
+*TO SIGN INTO ADMIN PANEL SIGN IN AS "username: admin, password: admin" 
 
