@@ -2,7 +2,7 @@
 **This is a sample project on Shopping Cart using Java SE and sqlite DB.**
 
 **Sample Photo:**
-![Sample]({{site.baseurl}}/Screenshot_20171127_214645.png)
+![Sample](Screenshot_20171127_214645.png)
 
 **Project Components:**
 
