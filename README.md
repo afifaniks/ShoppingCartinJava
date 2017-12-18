@@ -4,7 +4,10 @@
 **Sample Screenshot:**
 ![Sample](sample.png)
 
-**Project Components:**
+**Project Video:**
+[https://www.youtube.com/watch?v=UVw7neMnN34&t=91s](https://www.youtube.com/watch?v=UVw7neMnN34&t=91s)
+
+**Features:**
 
 - Cart  
 -   Category Wise Panels  
@@ -20,4 +23,3 @@
 - FOR PICTURES THERE ARE THREE DIFFERENT FOLDERS IN 'Project/src/products' AS PER CATEGORY. 
 - FOR NEW ENTRY, NEW PICTURES SHOULD   BE PLACED AS PER THEIR CATEGORY.
 - TO SIGN INTO ADMIN PANEL SIGN IN AS "username: admin, password: admin"
-
