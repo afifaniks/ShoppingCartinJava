@@ -1,5 +1,5 @@
 # Open Source project on Shopping Cart in Java
-**This is a sample project on Shopping Cart using Java SE and sqlite DB.**
+**This is a sample project on Shopping Cart using Java SE and sqlite DB.** [![forthebadge](https://forthebadge.com/images/badges/made-with-java.svg)](https://forthebadge.com)
 
 **Sample Screenshot:**
 ![Sample](sample.png)
